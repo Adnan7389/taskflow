@@ -40,3 +40,15 @@ python main.py
 | Persistence   | Data remains even after restarting             |
 
 | Clean Code    | Modular file structure and reusable logic      |
+
+
+
+## DAY 3 LEARNING TAKEAWAYS
+
+| Concept           | What you learned                                  |
+|-------------------|---------------------------------------------------|
+| Error Handling    | Using `try...except` to handle potential errors |
+| Unit Testing      | Writing tests with `pytest` to ensure correctness |
+| TDD Principles    | Testing edge cases and different scenarios      |
+| Logging           | Using the `logging` module for better feedback    |
+| File I/O          | Advanced file operations with `os` and `shutil`   |

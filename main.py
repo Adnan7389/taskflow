@@ -26,10 +26,14 @@ def main():
             manager.add_task(title, category)
         elif choice == "3":
             manager.list_tasks()
+            if not manager.tasks:
+                continue
             num = int(input("Enter task number to mark done: "))
             manager.mark_done(num)
         elif choice == "4":
             manager.list_tasks()
+            if not manager.tasks:
+                continue
             num = int(input("Enter task number to delete: "))
             manager.delete_task(num)
         elif choice == "5":

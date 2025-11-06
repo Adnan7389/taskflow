@@ -1,4 +1,13 @@
-# TaskFlow – CLI Task Tracker
+# TaskFlow
+
+Simple CLI to-do manager.
+
+## Install locally (editable)
+```bash
+python -m venv .venv
+source .venv/bin/activate      # Linux / macOS
+.venv\Scripts\activate         # Windows PowerShell
+pip install -e .
 
 ## Description  
 A simple command-line task tracker built in Python.  

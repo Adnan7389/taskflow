@@ -1,3 +1,6 @@
 __pycache__/
+.pytest_cache/
+taskflow.egg-info/
 venv
 tasks.json
+mytasks.json

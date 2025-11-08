@@ -1,63 +1,116 @@
-# TaskFlow
+# TaskFlow — A Simple CLI To-Do Manager
 
-Simple CLI to-do manager.
+TaskFlow is a command-line application for managing your to-do list. It's designed to be simple, fast, and easy to use, allowing you to handle tasks directly from your terminal.
 
-## Install locally (editable)
+## Features
+
+- **Add Tasks**: Quickly add new tasks with a title and an optional category.
+- **List Tasks**: View all your tasks, neatly organized with their status and category.
+- **Mark as Done**: Mark tasks as completed.
+- **Delete Tasks**: Remove tasks from your list.
+- **Persistent Storage**: Your tasks are saved in a JSON file, so you never lose your data.
+
+## Prerequisites
+
+- Python 3.8 or higher.
+
+## Installation
+
+1.  **Clone the repository (optional):**
+    ```bash
+    git clone https://github.com/your-username/taskflow.git
+    cd taskflow
+    ```
+
+2.  **Create and activate a virtual environment:**
+    ```bash
+    # For Linux/macOS
+    python3 -m venv .venv
+    source .venv/bin/activate
+
+    # For Windows
+    python -m venv .venv
+    .venv\Scripts\activate
+    ```
+
+3.  **Install the package:**
+    To make the `taskflow` command available in your terminal, install the package in editable mode:
+    ```bash
+    pip install -e .
+    ```
+
+## Usage
+
+TaskFlow is easy to use. Here are the available commands:
+
+### `add`
+
+Add a new task to your list. You can also specify a category using the `--category` or `-c` option.
+
 ```bash
-python -m venv .venv
-source .venv/bin/activate      # Linux / macOS
-.venv\Scripts\activate         # Windows PowerShell
-pip install -e .
-
-## Description  
-A simple command-line task tracker built in Python.  
-You can add tasks, view them, and delete tasks.
-
-## How to run  
-```bash
-cd taskflow
-python main.py
+$ taskflow add "Write a blog post" --category "Writing"
+✅ Added: Write a blog post (Writing)
 ```
 
+### `list`
 
+List all your tasks. Completed tasks are marked with a `✓`.
 
-## DAY 1 LEARNING TAKEAWAYS
+```bash
+$ taskflow list
+1. [ ] Write a blog post (Category: Writing)
+2. [ ] Buy groceries (Category: Personal)
+```
 
-| Concept                       | What I learned                               |
-|-------------------------------|------------------------------------------------|
-| Functions                     | Define and use functions in Python             |
-| Loops                         | `for` and `while` loops and control statements |
-| Data Structures (Lists & Dicts) | Store, add, and remove items in lists/dicts  |
-| Project Setup & CLI Menu      | Structure project and create a CLI menu        |
+### `done`
 
+Mark a task as done using its number from the list.
 
+```bash
+$ taskflow done 1
+✅ Task marked as done.
 
-## DAY 2 LEARNING TAKEAWAYS
+$ taskflow list
+1. [✓] Write a blog post (Category: Writing)
+2. [ ] Buy groceries (Category: Personal)
+```
 
+### `delete`
 
+Delete a task from the list using its number.
 
-| Concept       | What I learned                               |
+```bash
+$ taskflow delete 2
+🗑️ Task deleted.
 
-|---------------|------------------------------------------------|
+$ taskflow list
+1. [✓] Write a blog post (Category: Writing)
+```
 
-| OOP           | Organize code into classes (Task, TaskManager) |
+### Specifying a Data File
 
-| Encapsulation | Keep related data and methods together         |
+By default, tasks are stored in `tasks.json`. You can use a different file with the `--data-file` or `-d` option:
 
-| File I/O      | Save and load from JSON files                  |
+```bash
+taskflow --data-file work_tasks.json add "Finish the project report"
+```
 
-| Persistence   | Data remains even after restarting             |
+## Development
 
-| Clean Code    | Modular file structure and reusable logic      |
+To contribute to TaskFlow or run the tests, follow these steps:
 
+1.  **Install development dependencies:**
+    Make sure you have `pytest` installed, which is included in `requirements.txt`.
+    ```bash
+    pip install -r requirements.txt
+    ```
 
+2.  **Run tests:**
+    To run the test suite, use `pytest`:
+    ```bash
+    pytest
+    ```
 
-## DAY 3 LEARNING TAKEAWAYS
+## License
 
-| Concept           | What I learned                                  |
-|-------------------|---------------------------------------------------|
-| Error Handling    | Using `try...except` to handle potential errors |
-| Unit Testing      | Writing tests with `pytest` to ensure correctness |
-| TDD Principles    | Testing edge cases and different scenarios      |
-| Logging           | Using the `logging` module for better feedback    |
-| File I/O          | Advanced file operations with `os` and `shutil`   |
+This project is licensed under the MIT License.

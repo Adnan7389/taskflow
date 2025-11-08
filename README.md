@@ -18,7 +18,7 @@ TaskFlow is a command-line application for managing your to-do list. It's design
 
 1.  **Clone the repository (optional):**
     ```bash
-    git clone https://github.com/your-username/taskflow.git
+    git clone https://github.com/Adnan7389/taskflow.git
     cd taskflow
     ```
 

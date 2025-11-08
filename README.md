@@ -23,7 +23,7 @@ python main.py
 
 ## DAY 1 LEARNING TAKEAWAYS
 
-| Concept                       | What you learned                               |
+| Concept                       | What I learned                               |
 |-------------------------------|------------------------------------------------|
 | Functions                     | Define and use functions in Python             |
 | Loops                         | `for` and `while` loops and control statements |
@@ -54,7 +54,7 @@ python main.py
 
 ## DAY 3 LEARNING TAKEAWAYS
 
-| Concept           | What you learned                                  |
+| Concept           | What I learned                                  |
 |-------------------|---------------------------------------------------|
 | Error Handling    | Using `try...except` to handle potential errors |
 | Unit Testing      | Writing tests with `pytest` to ensure correctness |
